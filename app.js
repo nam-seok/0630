@@ -8,7 +8,7 @@ var apiRouter = require('./routes/Router');
 const mongoose = require('mongoose');
 
 var pw = process.env.PASSWORD
-var url = `mongodb+srv://root:${pw}@cluster0.ehnlg.mongodb.net/MyDB?retryWrites=true&w=majority`
+var url = `mongodb+srv://root:${pw}@cluster0.mdxaz.mongodb.net/mydb_daejeon?retryWrites=true&w=majority`
 mongoose.connect(url,{useNewUrlParser: true , useUnifiedTopology: true})
 
 

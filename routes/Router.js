@@ -9,18 +9,19 @@ var name = {
 };
 
 router.get('/', function(req, res, next) {
-    User.find((err, result)=>{
+    User.find((err, result) =>{
         if(err) {
             console.log(err)
         }
-    })
     // console.log(req)
     // res.send(result);
      res.render('index', {data:result});
+    })
 });
 
-router.get('/singup', (req, res, next) =>{
-    res.render('singup')
+
+router.get('/signup', (req, res, next) =>{
+    res.render('signup')
 })
 
 router.post('/singup', (req, res, next) =>{
@@ -35,6 +36,7 @@ router.post('/singup', (req, res, next) =>{
         }
         console.log(result)
         res.send("Success")
+})
 })
 
 router.get('/login', (req, res, next) =>{
@@ -62,7 +64,7 @@ router.post('/login',async (req, res, next) =>{
     })
 })
 
-/*
+
 router.post('/insert', (req, res, next) =>{
 
     var contact = new User()
@@ -77,7 +79,6 @@ router.post('/insert', (req, res, next) =>{
         console.log(result)
         res.send("Success")
     })
-*/
 })
 
 

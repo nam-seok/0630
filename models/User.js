@@ -14,10 +14,7 @@ var userSchema = mongoose.Schema({
         type:Date,
         default:Date.now
     }
+});
 
-
-})
-
-
-var User = mongoose.model('user', userSchema)
+var User = mongoose.model('user', userSchema);
 module.exports = User;
