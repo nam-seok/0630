@@ -64,9 +64,16 @@ router.post('/login',async (req, res, next) =>{
     })
 })
 
+router.get('/main', (req, res ,next) => {
+    res.render('main')
+})
 
+router.get('/insert', (req, res ,next) => {
+    res.render('insert')
+})
+
+/*
 router.post('/insert', (req, res, next) =>{
-
     var contact = new User()
     contact.username = req.body.username
     contact.passwordHash = req.body.passwordHash
@@ -80,7 +87,6 @@ router.post('/insert', (req, res, next) =>{
         res.send("Success")
     })
 })
-
-
+*/
 
 module.exports = router;
